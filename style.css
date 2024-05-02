@@ -1,0 +1,195 @@
+body{
+    background-color: #e7eded;
+}
+a {
+    font-size: 1.3rem;
+    color: #e7eded;
+    text-decoration: none !important;   
+}
+.lead{
+    font-family: "font1";
+}
+.navbar{
+	background-color: #0f0e0e;
+    font-family: "font1";
+}
+a:hover{
+	color: rgb(74, 152, 189);
+}
+#banner{
+    background-color: black;
+}
+.animate{
+    color: rgb(247, 241, 241); 
+    background-color: black;
+    font-size: 5em;
+    /* margin: 100px 0px 1px 55px; */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    
+    animation: animtext 4s steps(80, end); 
+}
+h1{
+    margin-top: 100px;
+}
+
+@keyframes animtext { 
+ from {
+     width: 0%; 
+     
+ } 
+}
+
+#cv{
+    margin-top: 40px;
+}
+
+.img_circle{
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+@font-face{
+	font-family: "font";
+	src:url("font/font.ttf");
+}
+@font-face{
+    font-family: "font1";
+    src:url("font/Big/big1.ttf");
+}
+html {
+  scroll-behavior: smooth;
+} 
+.head{
+	text-align: center;
+    font-family: "font";
+}
+.card_txt{
+    
+    font-family: "font1";
+    color: black;
+    text-align: right;
+}
+.card{
+	background-color: #e9e6e6;
+    /* color: black; */
+}
+.main-footer{
+    background-color: #111010;
+    color: #b0b3b4;
+    width: 100%;
+    text-align: right;
+}
+.card {
+    
+    box-shadow: 10px 10px 10px 10px rgb(86, 87, 87);
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
+.card img {
+    border-radius: 15px 15px 0 0;
+
+}
+.card-body h4 {
+    font-size: 20px;
+}
+.progress-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 20px
+}
+.progress {
+    height: 20px;
+    background: #333;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 30px;
+    overflow: visible
+}
+.progress .progress-bar {
+    position: relative;
+    -webkit-animation: animate-positive 2s;
+    animation: animate-positive 2s
+}
+.progress .progress-value {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    position: absolute;
+    top: -30px;
+    right: -25px
+}
+.progress .progress-bar:after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    background: #fff;
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    right: -5px;
+    z-index: 1;
+    transform: rotate(35deg)
+}
+
+
+ a:active{
+    color: black;
+}
+#name{
+    color: #114d5f;
+}
+.md{
+    padding-left: 170px;
+}
+
+span	
+{ 
+    width: 200px; 
+    height: 50px; 
+    display: inline-block;
+    background: #080808; 
+    border-radius: 200px; 
+    text-align: center; 
+    color: #fff; 
+    line-height: 50px; 
+    
+}
+.cont_skill li{
+    display: inline-block; 
+    padding: 20px;
+}
+    
+.cont_skill{
+    border-radius: 10px;
+    background-color: rgb(221, 227, 230);
+    padding: 30px;
+    box-shadow: 20px 20px 20px 20px rgb(86, 87, 87);
+}
+.cb{
+    color : black;
+}
+.circ_contact{
+    border-radius: 50%;
+    background-color: rgb(44, 42, 42);
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+}
+.circ_contact i{
+    padding:  20px 20px 20px 20px;
+    color: white;
+   
+}
+.contact a{
+    color : black;
+    padding-top: 15px;
+}
+.contact{
+    text-align: left;
+    margin: 10px;
+}
