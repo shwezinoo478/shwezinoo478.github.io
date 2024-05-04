@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Shwe Zin Oo</title>
-    <link rel="icon" href="images/logo1.jpeg">
+    <link rel="icon" href="images/ShweZin.jpg" style="border-radius: 50%;">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     
     <script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
@@ -40,10 +40,19 @@ for (var i = 0; i < btns.length; i++) {
     animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
+.card img{
+    height: 200px;
+}
+.card-body{
+    height: 90px;
+    text-align: center;
+}
 
 a:hover{
-  animation: shake 0.5s;
-  animation-iteration-count: infinite;
+    color : rgb(73, 145, 79) !important;
+    cursor: pointer;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
 }
 .card-body h4:hover{
   animation: shake 0.5s;
@@ -74,9 +83,7 @@ a:hover{
                         
 	<div id="banner">
         <nav class="navbar navbar-expand-md fixed-top  navbar-default pt-3">
-            <div class="container"> 
-                
-            	
+            <div class="container"> 	
                 <button class="navbar-toggler navbar-dark drop-down" data-toggle="collapse" data-target="#mynav">
 		    		<span class="navbar-toggler-icon" ></span>
 		    	</button>
@@ -104,13 +111,13 @@ a:hover{
         </div> -->
         
         <div class="animate head">
-            <h1 >Welcomed to my website!</h1> 
+            <h1 >Welcome to my website!</h1> 
             <img class="img_circle" src="images/ShweZin.jpg" height="200px" >
-            <h5 class="lead">I'm Shwe Zin Oo who is working as a Software Developer</h5>
+            <h5 class="lead ">I'm Shwe Zin Oo who is working as a Software Developer</h5>
             <p>
-                <h5 class="lead" >
-                    <a href="http://u.pc.cd/MCN" target="_blank">Resume <i class="fa fa-download"></i></a>   
-                    <a href = "#contact" style="padding-left: 30px;"> Contact Me </a>
+                <h5 class="lead "  >
+                    <a onclick="downloadFile('documents/ShweZinOo@Resume.pdf','ShweZinOo@Resume.pdf')">Resume <i class="fa fa-download"></i></a>   
+                    <a href = "#contact" id="cont_me"  style="padding-left: 30px;"> Contact Me </a>
                 </h5>
                 
             </p>
@@ -119,9 +126,6 @@ a:hover{
         
      
     </div>
-     
-    
-    
     
     
 <!--     ...........................about..............................
@@ -131,40 +135,44 @@ a:hover{
         <div class="container">
             <p class="display-4 head">About Me</p>
             <div class="row" id="cv">
-                <div class="col-lg-7">
-                    
+                <div class="col-lg-7"> 
                     <p class="lead">I'm looking for a challenging position that will allow
                         me to broaden my skills and abilities. I believe I can do all of my
                         tasks. I’m also highly motivated and ready to put in lots of effort
                         to gain expertise and obtaining a program that will improve my
-                        performance in my career.</p> 
+                        performance in my career.
+                    </p> 
                 </div>
-                <div class="col-lg-5 ">
-                    <div class="container " >
-                        <div class="row lead">
-                            <div class="col-lg-4 col-md-4 col-sm-6 ">
-                                <h4>Name:</h4>
-                                <h4>Date of Birth:</h4>
-                                <h4>Phone:</h4>
-                                <h4>Email</h4>
-                                <h4>Address</h4>
-                                <h4>Nationality</h4>
-                                <h4>Religion</h4>
-                            </div>
-                            <div class="col-lg-6 col-md-4 col-sm-6 ">
-                                <h4>Shwe Zin Oo</h4>
-                                <h4>January 17, 2001</h4>
-                                <h4>+06 20415336</h4>
-                                <h4>shwezinoo44422@gmail.com</h4>
-                                <h4>Bangkok</h4>
-                                <h4>Myanmar</h4>
-                                <h4>Buddha</h4>
+                <div class="col-lg-5">
+                    <div class="container-fluid " >
+                        <div class=" lead">
+                            <div class="row">
+                                <h4 class="col-lg-4 col-md-3 col-sm-3 col-2">Name</h4>
+                                <h4 class="col-lg-1 col-md-1 col-sm-1 col-1">:</h4>
+                                <h4 class="col-lg-7 col-md-8 col-sm-8 col-8">Shwe Zin Oo</h4>
+                                <h4 class="col-lg-4 col-md-3 col-sm-3 col-7">Date of Birth</h4>
+                                <h4 class="col-lg-1 col-md-1 col-sm-1 col-5">:</h4>
+                                <h4 class="col-lg-7 col-md-8 col-sm-8 col-12">January 17, 2001</h4>
+                                <h4 class="col-lg-4 col-md-3 col-sm-3 col-2">Phone</h4>
+                                <h4 class="col-lg-1 col-md-1 col-sm-1 col-1">:</h4>
+                                <h4 class="col-lg-7 col-md-8 col-sm-8 col-8">+06 20415336</h4>
+                                <h4 class="col-lg-4 col-md-3 col-sm-3 col-3">Email</h4>
+                                <h4 class="col-lg-1 col-md-1 col-sm-1 col-9">:</h4>
+                                <h4 class="col-lg-7 col-md-8 col-sm-8 col-12">shwezinoo44422@gmail.com</h4>
+                                <h4 class="col-lg-4 col-md-3 col-sm-3 col-4">Address</h4>
+                                <h4 class="col-lg-1 col-md-1 col-sm-1 col-1">:</h4>
+                                <h4 class="col-lg-7 col-md-8 col-sm-8 col-5">Bangkok</h4>
+                                <h4 class="col-lg-4 col-md-3 col-sm-3 col-4">Nationality</h4>
+                                <h4 class="col-lg-1 col-md-1 col-sm-1 col-1">:</h4>
+                                <h4 class="col-lg-7 col-md-8 col-sm-8 col-5">Myanmar</h4>
+                                <h4 class="col-lg-4 col-md-3 col-sm-3 col-3">Religion</h4>
+                                <h4 class="col-lg-1 col-md-1 col-sm-1 col-1">:</h4>
+                                <h4 class="col-lg-7 col-md-8 col-sm-8 col-7">Buddha</h4>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                
+                   
             </div>
         </div>
     </div>
@@ -220,12 +228,24 @@ a:hover{
    <!--  .............................project.............................. -->
 
     <h1 class="head my-5" id="project">Projects</h1>
-    <div class="container">
+    <div class="container" id="project_cont">
         <div class="row " >
-            <div class="col-lg-4 ">
-                <a href="http://u.pc.cd/RPu" target="_blank">
+            <div class="col-lg-4">
+                <a href="ecommerce.html" target="_blank">
                     <div class="card">
-                        <img src="images/cbs.jpg" class="card-img-top"> 
+                        <img src="images/ecommerce.jpeg" class="card-img-top">
+                        <div class="cb">
+                            <div class="card-body ">
+                                <h4 class="head">Ecommerce_Website</h4>
+                            </div> 
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 ">
+                <a href="nrc.html" target="_blank">
+                    <div class="card">
+                        <img src="images/cbs.jpg" class="card-img-top" > 
                         <div class="cb">
                         <div class="card-body">
                             <h4 class="head">Banking Projects</h4>                     
@@ -235,19 +255,6 @@ a:hover{
                 </a>
             </div>
             
-            
-            <div class="col-lg-4 ">
-                <a href="http://u.pc.cd/ueVctalK" target="_blank">
-                    <div class="card">
-                        <img src="images/t2.jpg" class="card-img-top">
-                        <div class="cb">
-                        <div class="card-body">
-                            <h4 class="head">NRC Implementation System</h4>                      
-                        </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
             <div class="col-lg-4 ">
                 <a href="https://github.com/shwezinoo478/Blog_update" target="_blank">
                     <div class="card">
@@ -275,18 +282,19 @@ a:hover{
                 </a>
             </div>
            
-            <div class="col-lg-4">
-                <a href="ecommerce.html" target="_blank">
+            <div class="col-lg-4 ">
+                <a href="http://u.pc.cd/ueVctalK" target="_blank">
                     <div class="card">
-                        <img src="images/ecommerce.jpeg" class="card-img-top">
+                        <img src="images/t2.jpg" class="card-img-top">
                         <div class="cb">
-                            <div class="card-body ">
-                                <h4 class="head">Ecommerce_Website</h4>
-                            </div> 
+                        <div class="card-body">
+                            <h4 class="head">NRC Implementation System</h4>                      
+                        </div>
                         </div>
                     </div>
                 </a>
             </div>
+            
         </div>
         
     </div>
@@ -296,8 +304,8 @@ a:hover{
     <h1 class="head my-5" id="contact">Contact</h1>
     <div class="container my-5">
         <div class="row">
-            <div class="col-lg-6 my-4 lead md" >
-                <div class="row mb-4">
+            <div class="col-lg-6 my-4 lead " >
+                <div class="row mb-4 md_cont">
                     <div class="circ_contact">
                         <i class="fa fa-linkedin"></i>
                     </div>
@@ -308,7 +316,7 @@ a:hover{
 
                     
                 </div>
-                <div class="row mb-4">
+                <div class="row mb-4 md_cont">
                     <div class="circ_contact">
                         <i class="fa fa-phone"></i>
                     </div>
@@ -316,7 +324,7 @@ a:hover{
                         <h2 class="lead">Phone <br> +06 20415336</h2></a>
                     </div>                    
                 </div>
-                <div class="row">
+                <div class="row md_cont">
                     <div class="circ_contact">
                         <i class="fa fa-globe"></i>
                     </div>
@@ -326,7 +334,7 @@ a:hover{
                 </div>
                 
             </div>
-            <div class="col-lg-6 my-4 lead md" >
+            <div class="col-lg-6 my-4 lead md_cont" >
                 <div class="row mb-4">
                     <div class="circ_contact">
                         <i class="fa fa-github"></i>
@@ -367,5 +375,21 @@ a:hover{
         </footer>
     </div>
     	 
+    <script>
+        function downloadFile(filePath,fileName) {
+            fetch(filePath)
+            .then(response => response.blob())
+            .then(blob => {
+                // Create a temporary anchor element
+                const link = document.createElement('a');
+                link.href = window.URL.createObjectURL(blob);
+                link.download = fileName;
+                link.click();
+                window.URL.revokeObjectURL(link.href);
+            })
+            .catch(error => console.error('Error downloading file:', error));
+        }
+    </script>
 </body>
+
 </html>
