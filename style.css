@@ -203,3 +203,7 @@ span
 .certi_card{
     height: 430px;
 }
+
+#about,#skill,#project,#certificate,#contact{
+    scroll-margin-top : 70px;
+}
