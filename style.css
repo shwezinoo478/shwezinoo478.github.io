@@ -186,6 +186,8 @@ span
     width: 70px;
     height: 70px;
     font-size: 30px;
+    display:inline;
+    float:left;
 }
 .circ_contact i{
     padding:  20px 20px 20px 20px;
@@ -199,6 +201,9 @@ span
 .contact{
     text-align: left;
     margin: 10px;
+    display:inline;
+    float:left;
+    width: 177px;
 }
 .certi_card{
     height: 430px;

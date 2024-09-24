@@ -18,18 +18,7 @@
     <!-- <script src="https://kit.fontawesome.com/58ec7c6d3d.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- <link rel="stylesheet" type="text/css" href="style/css/all.min.css"> -->
-    <script>
-    // Add active class to the current button (highlight it)
-    var header = document.getElementById("myDIV");
-    var btns = header.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-    });
-    }
-</script>
+
     <style>
 
     #skill li:hover {
@@ -102,13 +91,52 @@
     .card-flip:hover .card-back {
     transform: rotateY(0deg);
     }
+
+
+    .animation-element {
+    opacity: 0;
+    }
+
+    /*animation element sliding left*/
+    .animation-element.slide-left {
+    opacity: 0;
+    transition: all 500ms linear;
+    transform: translate3d(-100px, 0px, 0px);
+    }
+
+    .animation-element.slide-left.in-view {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+    }
+
+    /* .animation-element.slide-right {
+    opacity: 0;
+    transition: all 500ms linear;
+    transform: translate3d(100px, 0, 0);
+    } */
+
+    .animation-element.slide-right.in-view {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+    }
+
+    .animation-element.slide-up {
+    opacity: 0;
+    transition: all 500ms linear;
+    transform: translate3d(0, 100px, 0);
+    }
+
+    .animation-element.slide-up.in-view {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+    }
 </style>
 </head>
 <body>
 
      <!-- .....................................nav.......................... -->
                         
-	<div id="banner">
+	<div id="banner" class="animation-element slide-up testimonial">
         <nav class="navbar navbar-expand-md fixed-top  navbar-default pt-3">
             <div class="container"> 	
                 <button class="navbar-toggler navbar-dark drop-down" data-toggle="collapse" data-target="#mynav">
@@ -162,7 +190,7 @@
  -->
 <section class="p-4 " id="about">
     <div class=" jumbotron-fluid" id="test" >
-        <div class="container">
+        <div class="container animation-element slide-left testimonial">
             <p class="display-4 head">About Me</p>
             <div class="row" id="cv">
                 <div class="col-lg-7"> 
@@ -217,7 +245,7 @@
     <h1 class="head mb-5">Skill</h1>
     <div class="container cont_skill">
         <div class="lead"><h2>Programming Languages </h2></div>
-            <div class="row lead ">   
+            <div class="row lead animation-element slide-up testimonial">   
                 <ul  >
                     <li><span>HTML/CSS</span></li>
                     <li><span>Bootstrap</span></li>
@@ -231,7 +259,7 @@
                 </ul>
             </div>
         <div class="lead"><h2>Frameworks</h2></div>
-        <div class="row lead ">   
+        <div class="row lead animation-element slide-up testimonial">   
                 <ul  >
                     <li><span>Angular</span></li>
                     <li><span>Django</span></li>
@@ -240,7 +268,7 @@
         </div>
 
         <div class="lead"><h2>Database </h2></div>
-        <div class="row lead ">   
+        <div class="row lead animation-element slide-up testimonial">   
                 <ul  >
                     <li><span>PL/SQL </span></li>
                     <li><span>MSSQL</span></li>
@@ -259,7 +287,7 @@
 
     <h1 class="head " id="project">Projects</h1>
     <div class="container" id="project_cont">
-        <div class="row " >
+        <div class="row animation-element slide-left testimonial" >
             <div class="col-lg-4 project_card">
                 <a href="ecommerce.html" target="_blank">
                     <div class="card">
@@ -298,7 +326,7 @@
                 </a>
             </div>
         </div>
-        <div class="row " >
+        <div class="row animation-element slide-left testimonial" >
             <div class="col-lg-4 project_card">
                 <a href="lms.html" target="_blank">
                     <div class="card">
@@ -332,7 +360,7 @@
     <!-- ....................certificate........................ -->
     <h1 class="head"  id="certificate">  certificate</h1>
     <div class="container">
-    <div class="row">
+    <div class="row animation-element slide-left testimonial">
     <div class="col-lg-4 col-md-12 col-sm-12 col-12" ></div>
     <div class="col-lg-4 col-md-12 col-sm-12 col-12">
     <div class=" certi_card" >
@@ -361,7 +389,7 @@
     <div class="col-lg-4 col-md-12 col-sm-12 col-12"></div>
     </div>
     </div>
-    <!-- ..................contact.......................... -->
+    <!-- ..................contact..........................
     <h1 class="head my-5" id="contact">Contact</h1>
     <div class="container my-5">
         <div class="row">
@@ -421,6 +449,64 @@
                 </div>    
             </div>
         </div>
+    </div> -->
+
+
+    <!-- ..................contact.......................... -->
+    <h1 class="head my-5" id="contact">Contact</h1>
+    <div class="container my-5 animation-element slide-left testimonial">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 my-4 lead md d-flex justify-content-center" >
+                <div class="circ_contact">
+                    <i class="fa fa-linkedin"></i>
+                </div>
+                <div class="contact">
+                    <a href="https://www.linkedin.com/in/shwe-zin-oo-047434242" target="_blank">
+                    <h2 class="lead">LinkedIn <br> shwe-zin-oo-047434242</h2></a>
+                </div>
+            </div>
+            <div class="col-lg-6 my-4 lead md d-flex justify-content-center">
+                <div class="circ_contact">
+                    <i class="fa fa-github"></i>
+                </div>
+                <div class="contact">
+                    <a href="https://github.com/shwezinoo478" target="_blank">
+                    <h2 class="lead">GitHub <br> shwezinoo478</h2></a>
+                </div>
+            </div>
+            <div class="col-lg-6 my-4 lead md d-flex justify-content-center">
+                <div class="circ_contact">
+                    <i class="fa fa-phone"></i>
+                </div>
+                <div class="contact">
+                    <h2 class="lead">Phone <br> +959 971600771</h2></a>
+                </div> 
+            </div>
+            <div class="col-lg-6 my-4 lead md d-flex justify-content-center">
+                <div class="circ_contact">
+                    <i class='fa fa-envelope-o'></i>
+                </div>
+                <div class="contact">
+                    <h2 class="lead">Gmail <br> shwezinoo44422@gmail.com</h2></a>
+                </div>
+            </div>
+            <div class="col-lg-6 my-4 lead md d-flex justify-content-center">
+                <div class="circ_contact">
+                    <i class="fa fa-globe"></i>
+                </div>
+                <div class="contact">
+                    <h2 class="lead">Address <br> Yangon,Myanmar</h2></a>
+                </div> 
+            </div>
+            <div class="col-lg-6 my-4 lead md d-flex justify-content-center">
+                <div class="circ_contact">
+                    <i class="fa-brands fa-line"></i>
+                </div>
+                <div class="contact">
+                    <h2 class="lead">LineId<br> shwezin478</h2></a>
+                </div> 
+            </div>            
+        </div>
     </div>
 
 
@@ -445,6 +531,33 @@
             })
             .catch(error => console.error('Error downloading file:', error));
         }
+
+        var $animation_elements = $('.animation-element');
+        var $window = $(window);
+
+    function check_if_in_view() {
+    var window_height = $window.height();
+    var window_top_position = $window.scrollTop();
+    var window_bottom_position = (window_top_position + window_height);
+    
+    $.each($animation_elements, function() {
+        var $element = $(this);
+        var element_height = $element.outerHeight();
+        var element_top_position = $element.offset().top;
+        var element_bottom_position = (element_top_position + element_height);
+    
+        //check to see if this current container is within viewport
+        if ((element_bottom_position >= window_top_position) &&
+            (element_top_position <= window_bottom_position)) {
+        $element.addClass('in-view');
+        } else {
+        $element.removeClass('in-view');
+        }
+    });
+    }
+
+    $window.on('scroll resize', check_if_in_view);
+    $window.trigger('scroll');
     </script>
 </body>
 
